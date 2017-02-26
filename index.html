@@ -10,7 +10,7 @@
     <div id="login-panel">
         <h2>Login to chat</h2>
         <input type="text" id="user" placeholder="type your Username"/>
-        <input type="text" id="passkey" placeholder="type your password"/>
+        <input type="password" id="passkey" placeholder="type your password"/>
         <button id="loginbutton">Login</button>
     </div>
     <div id="chat-panel">
@@ -35,7 +35,7 @@
 
         var root = firebase.database().ref();
         var userList = firebase.database().ref('/users/');
-        var msgList = firebase.database().ref('/messagges/');
+        var msgList = firebase.database().ref('/messages/');
         
         var loginPanel = document.querySelector('#login-panel');
         var loginNameInput = document.querySelector('#user');

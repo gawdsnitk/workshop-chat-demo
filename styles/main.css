@@ -14,7 +14,7 @@ body {
   width: 400px;
   background-color: #efefef;
 }
-.msg > p {
+.msg > p, .msg-self > p{
   margin-top: 0px;
 }
 .msg-self {
