@@ -6,8 +6,8 @@
 Dependencies: ```node```, ```mongodb```
 
 Instructions to use:
-- Clone the repo ```https://github.com/AnshulMalik/Gawds-Dev-Day-Feedback-Chat.git```
-- cd ```Gawds-Dev-Day-Feedback-Chat```
+- Clone the repo ```https://github.com/gawdsnitk/workshop-chat-demo.git```
+- cd ```workshop-chat-demo```
 - ```npm install```
 - ```node index.js```
 
