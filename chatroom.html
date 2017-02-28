@@ -5,56 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/main.css"/>
-    <style>
-        .to-animate{
-            padding: 20px;
-            width: 100px;
-            margin-bottom: 10px;
-            transition: all 0.5s;
-            cursor: pointer;
-            text-align: left;
-            background: white;
-            border-radius: 10px;
-        }
-        .to-animate:hover{
-            background: rgba(0, 0, 0, 0.5);
-            padding-left: 60px;
-            border-left: 10px solid white;
-            color: white;
-        }
-        .rotatorZ, .rotatorX, .rotatorY{
-            height: 100px;
-            width: 150px !important;
-            color: white;
-            margin-top: 10px;
-            background: red;
-            transition: all 0.5s;
-            display: inline-flex;
-        }
-        @keyframes rotationX {
-            from {
-                background-color: red;
-                color: white;
-                transform: rotateX(0deg);    
-            }
-            to {
-                background-color: white;
-                color: red;
-                transform: rotateX(180deg);    
-            }
-        }
-        .rotatorX{
-            animation: rotationX 1s alternate infinite;
-        }
-        .rotatorY:hover{
-            background: white;
-            transform: rotateY(180deg);
-        }
-        .rotatorZ:hover{
-            background: white;
-            transform: rotateZ(180deg);
-        }
-    </style>
 </head>
 <body>
 <div class="container-fluid">
@@ -78,7 +28,7 @@
             <a class="head-wrapper" target="_blank" href="https://github.com/gawdsnitk/DeveloperDay">
                 <div style="position: relative; display: inline-block; top: 10px;">
                     <h3 class="head">gawds</h3>
-                    <h3>Workshop - Day 2</h3>
+                    <h3>Workshop - Day 3</h3>
                     <div class="line"></div>
                 </div>
             </a>
@@ -90,279 +40,21 @@
             </div>
             <section class="slide-viewer">
                 <div class="slide">
-                    <h2>HTML</h2>
-                    <h4><i>HyperText Markup Language</i></h4>
-                    <div>
-                        <i>Tags, Elements, Attributes</i>
-                    </div>
-                </div>
-                <div class="slide">
-                    <h2>HTML</h2>
-                    <h4><i>What is <u>H</u>ypertext <u>M</u>arkup</i></h4>
-                    <div>
-                        HyperText refers to how web pages are linked
-                        <br/>Markup is the process of using <strong>tags</strong> to tell the browser how to display the
-                        page
-                    </div>
-                </div>
-                <div class="slide">
-                    <h2>HTML</h2>
-                    <h4><i>Tags</i></h4>
-                    <div class="code">
-                        &lt;!DOCTYPE html&gt;<br/>
-                        &lt;html&gt;<br/>
-                        &lt;head&gt;<br/>
-                        &lt;title&gt;Paragraph Example&lt;/title&gt;<br/>
-                        &lt;/head&gt;<br/>
-                        &lt;body&gt;<br/>
-                        &lt;p&gt;Here is a first paragraph of text.&lt;/p&gt;<br/>
-                        &lt;p&gt;Here is a second paragraph of text.&lt;/p&gt;<br/>
-                        &lt;p&gt;Here is a third paragraph of text.&lt;/p&gt;<br/>
-                        &lt;/body&gt;<br/>
-                        &lt;/html&gt;<br/>
-                    </div>
-                </div>
-                <div class="slide">
-                    <h2>HTML</h2>
-                    <h4><i>Elements <span class="comment">&</span> Attributes</i></h4>
-                    <div class="code">
-                        &lt;p align=&quot;left&quot;&gt;This is left aligned&lt;/p&gt;<br/>
-                        &lt;p align=&quot;center&quot;&gt;This is center aligned&lt;/p&gt;<br/>
-                        &lt;textarea class=&quot;form-input&quot; id=&quot;comment&quot; <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder=&quot;Enter
-                        your text here&quot;&gt;&lt;/textarea&gt;
-                    </div>
-                </div>
-                <div class="slide">
-                    <h2>HTML</h2>
-                    <h4><i><strong>Meta</strong> <span class="comment">&</span> other tags</i></h4>
-                    <div class="code">
-                        <div class="comment">&lt;!-- Meta tag examples --&gt;</div>
-                        &lt;head&gt;<br/>
-                        &lt;title&gt;Meta Tags Example&lt;/title&gt;<br/>
-                        &lt;meta name=&quot;keywords&quot; content=&quot;HTML, Meta Tags, Metadata&quot; /&gt;<br/>
-                        &lt;meta name=&quot;description&quot; content=&quot;Learning about Meta Tags.&quot; /&gt;<br/>
-                        &lt;meta ame=&quot;author&quot; content=&quot;GAWDS&quot; /&gt;<br/>
-                        &lt;meta charset="UTF-8" /&gt;<br/>
-                        &lt;/head&gt;<br/>
-                        &lt;div&gt; Block & &lt;span&gt;inline&lt;/span&gt; elements&lt;/div&gt;<br/>
-                    </div>
-                </div>
-                <div class="slide">
-                    <h2>HTML</h2>
-                    <h4><i>the structure for your chat room</i></h4>
-                    <div class="code">
-                        &lt;!DOCTYPE HTML&gt;<br/>
-                        &lt;html lang=&quot;en&quot;&gt;<br/>
-                        &lt;head&gt;<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset=&quot;utf-8&quot;&gt;<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name=&quot;viewport&quot;
-                         content=&quot;width=device-width,initial-scale=1.0&quot;&gt;<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Firebase Chat&lt;/title&gt;<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel=&quot;stylesheet&quot; href=&quot;styles/main.css&quot;&gt;<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;script type=&quot;text/javascript&quot; src=&quot;https://www.gstatic.com/firebasejs/3.6.2/firebase.js&quot;&gt;&lt;/script&gt;<br/>
-                        &lt;/head&gt;<br/>
-                        &lt;body&gt;<br/>
-                        &lt;div id=&quot;login-panel&quot;&gt;<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Login to chat&lt;/h2&gt;<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;text&quot; id=&quot;user&quot; placeholder=&quot;type your Username&quot;/&gt;<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;password&quot; id=&quot;passkey&quot; placeholder=&quot;type your password&quot;/&gt;<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button id=&quot;loginbutton&quot;&gt;Login&lt;/button&gt;<br/>
-                        &lt;/div&gt;<br/>
-                        &lt;div id=&quot;chat-panel&quot;&gt;<br/>
-                        &lt;h2 id=&quot;headingname&quot;&gt;Chatroom&lt;/h2&gt;<br/>
-                        &lt;button id=&quot;logoutbutton&quot;&gt;Logout&lt;/button&gt;<br/>
-                        &lt;div id=&quot;input-container&quot;&gt;<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input id=&quot;text&quot; type=&quot;text&quot; placeholder=&quot;type your Message&quot;&gt;<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button id=&quot;post&quot;&gt;Post&lt;/button&gt;<br/>
-                        &lt;/div&gt;<br/>
-                        &lt;div id=&quot;chat-container&quot;&gt;&lt;/div&gt;<br/>
-                        &lt;/div&gt;<br/>
-                        &lt;script&gt;&lt;/script&gt;<br/>
-                        &lt;/body&gt;<br/>
-                        &lt;/html&gt;<br/>
-                    </div>
-                </div>
-                <div class="slide">
-                    <h2>Css</h2>
-                    <h4><i>Cascading Style Sheets</i></h4>
-                    <div>Imagine playing pokemon go with every pokemon looking the same</div>
-                </div>
-                <div class="slide">
-                    <h2>Css</h2>
-                    <h4><i>Basic syntax <span class="comment">&</span> Selectors</i></h4>
-                    <div>
-                        <div class="code">
-                            selector {<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;style-attribute: value;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;.<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;.<br/>
-                            }<br/>
-                            <div class="commment">/*A practical example*/</div>
-                            body {<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: red;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 10px;<br/>
-                            }
-                            <div class="commment">/*The universal selector * */</div>
-                            * {<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 10px;<br/>
-                            }
-                            <div class="commment">/*The id selector*/</div>
-                            #id {<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;height: 30px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;width: 40px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid #000000;<br/>
-                            }
-                            <div class="commment">/*The class selector*/</div>
-                            .classname {<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;height: 30px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;width: 40px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid #000000;<br/>
-                            }
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <h2>Css</h2>
-                    <h4><i>The box model</i></h4>
-                    <div class="code">
-                        <img src="png/box-model.PNG"/>
-                    </div>
-                    <div class="code">
-                        <br/>*{<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br/>    
-                        }<br/>
-                    </div>
-                </div>
-                <div class="slide">
-                    <h2>Css</h2>
-                    <h4>Margin & Padding</h4>
-                    <div class="code">
-                        div { <br/>
-                        /*defining margins*/<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 10px;<br/>    
-                        &nbsp;&nbsp;&nbsp;&nbsp;margin-left: 10px;<br/>    
-                        &nbsp;&nbsp;&nbsp;&nbsp;margin-right: 10px;<br/>    
-                        &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 10px;<br/>    
-                        /*defining padding*/<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;padding-top: 10px;<br/>    
-                        &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 10px;<br/>    
-                        &nbsp;&nbsp;&nbsp;&nbsp;padding-right: 10px;<br/>    
-                        &nbsp;&nbsp;&nbsp;&nbsp;padding-bottom: 10px;<br/>    
-                        } <br/>
-                        div { <br/>
-                        /*shorthand margin*/<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;margin: 10px 20px 10px 20px;<br/>    
-                        /*shorthand padding*/<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px 20px 10px 20px;<br/>    
-                        }
-                    </div>
-                </div>
-                <div class="slide">
-                    <h2>Css</h2>
-                    <h4>Borders</h4>
-                    <div class="code">
-                        <div style="height: 40px; width: 100px; border: 10px solid green;"></div>
-                        div { <br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;border: 10px solid green;<br/>    
-                        } <br/>
-                        <div style="height: 40px; width: 100px; border-bottom: 5px solid cyan; border-right: 10px solid blue; border-left: 10px solid green; border-top: 5px solid black;"></div>                        
-                        div { <br/>
-                        /*defining borders*/<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;border-top: 5px solid black;<br/>    
-                        &nbsp;&nbsp;&nbsp;&nbsp;border-left: 10px solid green;<br/>    
-                        &nbsp;&nbsp;&nbsp;&nbsp;border-right: 10px solid blue;<br/>    
-                        &nbsp;&nbsp;&nbsp;&nbsp;border-bottom: 5px solid cyan;<br/>    
-                        } 
-                    </div>
-                </div>
-                <div class="slide">
-                    <h2>Css</h2>
-                    <h4>Positioning & Display</h4>
-                    <div style="text-align: center; width: 100%;">
-                        <div style="position: relative; padding: 10px; height: 100px; width: 300px; background: black">
-                            <div style="position: relative; height: 20px; width: 100px; background: blue;"></div>
-                            <div style="position: relative; margin-top: 10px; font-size: 10px; height: 10px; width: 100px; background: white;">RELATIVE</div>
-                        </div>
-                        <br/>
-                        <div style="position: relative; padding: 10px; height: 100px; width: 300px; background: black">
-                            <div style="position: relative; height: 20px; width: 100px; background: blue;"></div>
-                            <div style="position: absolute; top: 20px; font-size: 10px; height: 10px; width: 100px; background: white;">absolute</div>
-                        </div>
-                        <br/>
-                        <div style="position: relative; padding: 10px; height: 100px; width: 300px; background: black;">
-                            <div style="display: inline-block; position: relative; height: 20px; width: 100px; background: blue; font-size: 10px !important;">inline</div>
-                            <div style="display: inline-block; position: relative; height: 10px; width: 100px; background: white; font-size: 10px !important;">inline</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <h4>Animations and CSS</h4>
-                    <div>
-                        <div class="to-animate">Hover over me</div>
-                        <div class="to-animate">Menu option 2</div>
-                        <div class="to-animate">Menu option 3</div>
-                        <div class="to-animate">Menu option 4</div>
-                        <div class="rotatorX">RotateX</div>
-                        <div class="rotatorY">RotateY</div>
-                        <div class="rotatorZ">RotateZ</div>
-                    </div>
-                </div>
-                <!--<div class="slide">
-                    <h2>Css</h2>
-                    <h4><i>Lets' start styling the extension</i></h4>
-                    <div>
-                        <div class="code">
-                            html, body {    <br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;width: 200px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;height: 200px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 0;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #FFFFFF;<br/>
-                            }<br/>
-                            <br/>
-                            h1 {<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 20px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br/>
-                            }<br/>
-                            <br/>
-                            h4 {<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 14px;<br/>
-                            }<br/>
-                            <br/>
-                            #FeedContainer {<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br/>
-                            }<br/>
-                            <br/>
-                            .Feed {<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 6px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 6px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 13px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;border: solid 1px #bcbcbc;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 6px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: justify;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;word-wrap: break-word;<br/>
-                            }<br/>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
                     <h2>Javascript</h2>
-                    <h4>it is <strong>Not</strong> java</h4>
+                    <h4>Is <strong>NOT</strong> Java</h4>
                     <div>Making your pokemon <i>dance</i></div>
                 </div>
                 <div class="slide">
                     <h2>Javascript</h2>
-                    <h4>Data Types</h4>
+                    <h4>Data Types and Operations</h4>
                     <div>
                         <ul>
                             <li>The Universal declaration VAR</li>
                             <li>Number &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; 1024</li>
                             <li>String &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;"Hello"</li>
                             <li>Boolean - true/false</li>
+                            <li>Math operations(+, -, /, * etc)</li>
+                            <li>Precedence</li>
                         </ul>
                     </div>
                 </div>
@@ -377,6 +69,18 @@
                         </ul>
                     </div>
                 </div>
+                <div class="slide">
+                    <h2>Javascript</h2>
+                    <h4>Conditions</h4>
+                    <div>
+                        <ul>
+                            <li>If..Else</li>
+                            <li>Comparisons</li>
+                            <li>Switch</li>
+                        </ul>
+                    </div>
+                </div>
+                
                 <div class="slide">
                     <h2>Javascript</h2>
                     <h4>Loops</h4>
@@ -410,7 +114,7 @@
                     <div>
                         Document Object Model
                     </div>
-                </div>
+                </div><!--
                 <div class="slide">
                     <h2>Javascript</h2>
                     <h4>jQuery</h4>
