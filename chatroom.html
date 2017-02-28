@@ -61,8 +61,7 @@
     <div class="row">
         <div class="col-sm-3 sidebar">
             <div class="terminal-bar">
-                <span class="glyphicon glyphicon-cog"></span><span> Developer Terminal</span><span style="float: right"
-                                                                                                   class="close-button glyphicon glyphicon-remove"></span>
+                <span class="glyphicon glyphicon-cog"></span><span> Developer Terminal</span><span style="float: right" class="close-button glyphicon glyphicon-remove"></span>
             </div>
             <div class="message-box">
                 <ul id="messages"></ul>
@@ -346,42 +345,151 @@
                         <div class="rotatorZ">RotateZ</div>
                     </div>
                 </div>
-                <!--<div class="slide">
+                <div class="slide">
                     <h2>Css</h2>
-                    <h4><i>Lets' start styling the extension</i></h4>
+                    <h4><i>Lets' start styling the Chat app</i></h4>
                     <div>
                         <div class="code">
-                            html, body {    <br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;width: 200px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;height: 200px;<br/>
+                            *{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;transition: all 0.2s;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;outline: none;<br/>	
+                            }<br/>
+                            body {<br/>
                             &nbsp;&nbsp;&nbsp;&nbsp;margin: 0;<br/>
                             &nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #FFFFFF;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br/>
                             }<br/>
-                            <br/>
-                            h1 {<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 20px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br/>
+                            input{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.2em;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px 20px 10px 20px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 10px auto;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background: transparent;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border: none;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-bottom: solid 2px crimson;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br/>
                             }<br/>
-                            <br/>
-                            h4 {<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 14px;<br/>
+                            input:focus{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-bottom: solid 2px white;<br/>        
                             }<br/>
-                            <br/>
-                            #FeedContainer {<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br/>
+                            #logoutbutton{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;top: 10px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;right: 10px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background: none;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border: none;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;cursor: pointer;<br/>
                             }<br/>
-                            <br/>
-                            .Feed {<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 6px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 6px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 13px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;border: solid 1px #bcbcbc;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 6px;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: justify;<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;word-wrap: break-word;<br/>
+                            #logoutbutton:hover{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing: 2px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: crimson;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 600;<br/>
+                            }<br/>
+                            #chat-panel > h2{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 20px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 400;<br/>
                             }<br/>
 
+                            /*style for each chat bubble*/
+                            .msg, .msg-self {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 10px 0;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #efefef;<br/>
+                            }<br/>
+                            .msg > p, .msg-self > p{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 0px;<br/>
+                            }<br/>
+                            .msg-self {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: right;<br/>
+                            }<br/>
+                            .msg-self > b{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: #50b1ff;<br/>
+                            }<br/>
+                            #text {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 5px 0px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 90vw;<br/>
+                            }<br/>
+                            /*style for message send button*/<br/>
+                            #post {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;right: 0;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;bottom: 0;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;height: 53px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 10vw;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #50b1ff;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border: none;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: #FFF;<br/>
+                            }<br/>
+                            /*style for chat window*/<br/>
+                            #chat-panel{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background: #1d1d1d;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;top: 0;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;left: 0;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;position: fixed;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;display: none;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;z-index: 1;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 100vw;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;height: 100vh;<br/>
+                            }<br/>
+                            /*style for messages container*/<br/>
+                            #chat-container{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;height: 80vh;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;overflow-y:  scroll;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-top: solid 2px white;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-bottom: solid 2px white;<br/>  
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: black;<br/> 
+                            }<br/>
+                            #input-container > input {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-bottom: none !important;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;height: 53px;<br/>
+                            }<br/>
+                            #input-container{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;display: inline-flex;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;bottom: 0;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 100vw;<br/>
+                            }<br/>
+                            /*login panel*/<br/>
+                            #login-panel{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;position: fixed;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;top: 0;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;left: 0;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;height: 100vh;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 100vw;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;z-index: 100;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-color:#1d1d1d;<br/>
+                            }<br/>
+                            #login-panel > h2 {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 100px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: rgba(255, 255, 255, 0.5);<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;#login-panel > button{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 20px auto;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;display: block;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 5px 15px 8px 15px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 15px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: 700;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border: none;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 5px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;cursor: pointer;<br/>
+                            }<br/>
+                            #login-panel > button:focus{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;outline: none;<br/>
+                            }<br/>      
+                            #login-panel > button:hover{<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background: crimson;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: underline;<br/>
+                            }<br/>      
+                            #login-panel > input {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;display: block;<br/>
+                            }<br/>
                         </div>
                     </div>
                 </div>
@@ -447,7 +555,7 @@
                         Document Object Model
                     </div>
                 </div>
-                <div class="slide">
+                <!--<div class="slide">
                     <h2>Javascript</h2>
                     <h4>jQuery</h4>
                 </div>
