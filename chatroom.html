@@ -275,7 +275,13 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;border-left: 10px solid green;<br/>    
                         &nbsp;&nbsp;&nbsp;&nbsp;border-right: 10px solid blue;<br/>    
                         &nbsp;&nbsp;&nbsp;&nbsp;border-bottom: 5px solid cyan;<br/>    
-                        } 
+                        }
+						<div style="height: 100px; width: 100px; border: 20px solid cyan; border-radius: 50%;"></div>                        
+                        div { <br/>
+                        /*defining borders*/<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;border: 5px solid black;<br/>    
+                        &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 50%<br/>    
+                        }						
                     </div>
                 </div>
                 <div class="slide">
@@ -299,6 +305,36 @@
                     </div>
                 </div>
                 <div class="slide">
+                    <h2>Css</h2>
+                    <h4>Float</h4>
+                    <div style="text-align: center; width: 100%;">
+                        <div style="position: relative; padding: 10px; height: 100px; width: 300px; background: black">
+                            <div style="position: relative; float: left; height: 20px; width: 100px; background: blue;">Left</div>
+                        </div>
+                        <br/>
+                        <div style="position: relative; padding: 10px; height: 100px; width: 300px; background: black">
+                            <div style="position: relative; float: right; height: 20px; width: 100px; background: blue;">Right</div>
+                        </div>
+                        <br/>
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Css</h2>
+                    <h4>z-index</h4>
+                    <div style="text-align: center; width: 100%;">
+                        <div style="position: relative; z-index: 1; padding: 10px; height: 100px; width: 300px; background: black">
+                            <div style="position: absolute; z-index: 1; height: 20px; width: 100px; background: blue;"></div>
+							<div style="position: absolute; z-index: 2; top: 20px; height: 15px; width: 90px; background: white;"></div>
+                        </div>
+                        <br/>
+                        <div style="position: relative; z-index: 1; padding: 10px; height: 100px; width: 300px; background: black">
+                            <div style="position: absolute; z-index: 2; height: 20px; width: 100px; background: blue;"></div>
+							<div style="position: absolute; z-index: 1; top: 20px; height: 15px; width: 90px; background: white;"></div>
+                        </div>
+						<br/>
+                    </div>
+                </div>
+				<div class="slide">
                     <h4>Animations and CSS</h4>
                     <div>
                         <div class="to-animate">Hover over me</div>
